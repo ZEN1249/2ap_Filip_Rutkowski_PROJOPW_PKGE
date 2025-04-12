@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (userInput === password) {
                     if (unlock) {
-                        // Zapisz odblokowanie poziomu w localStorage
                         localStorage.setItem(unlock, 'unlocked');
                     }
                     passwordMessage.style.color = "green";

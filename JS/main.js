@@ -1,4 +1,4 @@
 import { levelConfig } from './modules/config.js';
-import './pages/index/lvl-unlock.js';
+import './modules/lvl-unlock.js';
 
 window.levelConfig = levelConfig;

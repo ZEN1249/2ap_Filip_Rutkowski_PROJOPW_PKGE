@@ -15,7 +15,7 @@ nav a {
     background-color: #e7e7e7;
     margin: 0 10px 10px 10px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;;
 }
 
 nav a:hover {
@@ -30,5 +30,5 @@ nav a:active {
 }
 
 nav a:focus {
-    outline: 2px solid #140303; 
+    outline: 2px solid #140303;
 }

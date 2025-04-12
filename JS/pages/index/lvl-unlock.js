@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const currentLevel = window.location.pathname.split('/').pop().replace('.html', '');
 
-    if (levelConfig[currentLevel]) {
+    const levelConfig = window.levelConfig;
+
+    if (levelConfig && levelConfig[currentLevel]) {
         const { password, unlock } = levelConfig[currentLevel];
 
         const checkPasswordBtn = document.getElementById("check-password-btn");

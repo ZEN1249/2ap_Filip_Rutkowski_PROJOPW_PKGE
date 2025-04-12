@@ -5,13 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
     <link rel="icon" href="IMG/icons/fav-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="CSS/main.css"">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/pages/index.css">
 </head>
 <body>
     <nav>
         <a href="zasady.html">Zasady</a>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="o_nas.html">O nas</a>
+        <a href="jakgrac.html">Jak grać</a>
+        <a href="odpowiedzi.html">Odpowiedzi</a>
     </nav>
+    <button class="reset-button" id="reset-progress">Resetuj postęp</button>
+    <main>
+        <div class="button-container">
+            <button class="large-button" id="poziom1" onclick="window.location.href='poziom1.html'">Poziom1</button>
+            <button class="large-button" id="poziom2" onclick="window.location.href='poziom2.html'">Poziom2</button>
+            <button class="large-button" id="poziom3" onclick="window.location.href='poziom3.html'">Poziom3</button>
+            <button class="large-button" id="poziom4" onclick="window.location.href='poziom4.html'">Poziom4</button>
+            <button class="large-button" id="poziom5" onclick="window.location.href='poziom5.html'">Poziom5</button>
+        </div>
+    </main>
+    <script src="JS/main.js" type="module"></script>
+    <script src="JS/pages/index/reset-button.js"></script>
 </body>
 </html>

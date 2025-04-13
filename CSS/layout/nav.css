@@ -4,6 +4,12 @@ nav {
     padding: 8px;
     user-select: none;
     transition: padding 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -13,9 +19,9 @@ nav a {
     border: 2px solid #ccc;
     border-radius: 8px;
     background-color: #e7e7e7;
-    margin: 0 10px 10px 10px;
+    margin: 0 10px;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s, color 0.2s;;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
 }
 
 nav a:hover {

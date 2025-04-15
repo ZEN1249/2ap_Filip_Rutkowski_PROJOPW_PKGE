@@ -1,25 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poziom3</title>
-    <link rel="icon" href="IMG/icons/fav-icon.png" type="image/x-icon">
+    <title>Poziom 3 - Quiz</title>
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/pages/poziom3.css">
 </head>
 <body>
     <nav>
+        <a href="index.html">Home</a>
         <a href="zasady.html">Zasady</a>
         <a href="jakgrac.html">Jak grać</a>
         <a href="odpowiedzi.html">Odpowiedzi</a>
     </nav>
 
+    <h1>Poziom 3 - Quiz</h1>
+    <div class="quiz-container">
+        <div class="question" data-correct="1">
+            <p>1. Co oznacza skrót CPU?</p>
+            <ul>
+                <li><label><input type="radio" name="q1" value="0"> Computer Power Unit</label></li>
+                <li><label><input type="radio" name="q1" value="1"> Central Processing Unit</label></li>
+                <li><label><input type="radio" name="q1" value="0"> Central Power Unit</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="2">
+            <p>2. Który algorytm jest używany do znajdowania najkrótszej ścieżki w grafie?</p>
+            <ul>
+                <li><label><input type="radio" name="q2" value="0"> Algorytm sortowania bąbelkowego</label></li>
+                <li><label><input type="radio" name="q2" value="1"> Algorytm DFS (przeszukiwanie w głąb)</label></li>
+                <li><label><input type="radio" name="q2" value="2"> Algorytm Dijkstry</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="1">
+            <p>3. Który język jest używany do tworzenia aplikacji na Androida?</p>
+            <ul>
+                <li><label><input type="radio" name="q3" value="0"> Python</label></li>
+                <li><label><input type="radio" name="q3" value="1"> Java</label></li>
+                <li><label><input type="radio" name="q3" value="0"> C++</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="1">
+            <p>4. Co oznacza skrót HTTP?</p>
+            <ul>
+                <li><label><input type="radio" name="q4" value="1"> HyperText Transfer Protocol</label></li>
+                <li><label><input type="radio" name="q4" value="0"> HyperText Transmission Protocol</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="1">
+            <p>5. Który z poniższych jest frameworkiem JavaScript?</p>
+            <ul>
+                <li><label><input type="radio" name="q5" value="0"> Django</label></li>
+                <li><label><input type="radio" name="q5" value="1"> React</label></li>
+                <li><label><input type="radio" name="q5" value="0"> Flask</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="1">
+            <p>6. Który z poniższych jest systemem kontroli wersji?</p>
+            <ul>
+                <li><label><input type="radio" name="q6" value="0"> Docker</label></li>
+                <li><label><input type="radio" name="q6" value="1"> Git</label></li>
+                <li><label><input type="radio" name="q6" value="0"> Kubernetes</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="2">
+            <p>7. Co oznacza skrót JSON?</p>
+            <ul>
+                <li><label><input type="radio" name="q7" value="0"> JavaScript Object Network</label></li>
+                <li><label><input type="radio" name="q7" value="0"> JavaScript Online Notation</label></li>
+                <li><label><input type="radio" name="q7" value="2"> JavaScript Object Notation</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="1">
+            <p>8. Który z poniższych jest językiem programowania?</p>
+            <ul>
+                <li><label><input type="radio" name="q8" value="1"> Python</label></li>
+                <li><label><input type="radio" name="q8" value="0"> HTML</label></li>
+                <li><label><input type="radio" name="q8" value="0"> CSS</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="1">
+            <p>9. Który z poniższych jest bazą danych NoSQL?</p>
+            <ul>
+                <li><label><input type="radio" name="q9" value="0"> MySQL</label></li>
+                <li><label><input type="radio" name="q9" value="1"> MongoDB</label></li>
+                <li><label><input type="radio" name="q9" value="0"> PostgreSQL</label></li>
+            </ul>
+        </div>
+        <div class="question" data-correct="2">
+            <p>10. Co oznacza skrót API?</p>
+            <ul>
+                <li><label><input type="radio" name="q10" value="0"> Application Process Interface</label></li>
+                <li><label><input type="radio" name="q10" value="1"> Application Protocol Interface</label></li>
+                <li><label><input type="radio" name="q10" value="2"> Application Programming Interface</label></li>
+            </ul>
+        </div>
+        <button id="check-answers-btn">Sprawdź odpowiedzi</button>
+        <p id="quiz-message" style="margin-top: 10px; color: red;"></p>
+    </div>
+
     <div class="password-container">
+        <p id="password-display" style="margin-top: 20px; font-size: 18px; color: green;"></p>
         <input type="text" id="password-input" placeholder="Wpisz hasło">
         <button id="check-password-btn">Sprawdź</button>
         <p id="password-message" style="margin-top: 10px; color: red;"></p>
     </div>
 
+    <script src="JS/pages/poziom3/quiz.js"></script>
     <script src="JS/main.js" type="module"></script>
 </body>
 </html>

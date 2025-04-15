@@ -1,25 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poziom2</title>
-    <link rel="icon" href="IMG/icons/fav-icon.png" type="image/x-icon">
+    <title>Poziom 2</title>
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/pages/poziom2.css">
 </head>
 <body>
     <nav>
+        <a href="index.html">Home</a> 
         <a href="zasady.html">Zasady</a>
         <a href="jakgrac.html">Jak grać</a>
         <a href="odpowiedzi.html">Odpowiedzi</a>
     </nav>
 
+    <h1>Poziom 2 - Dopasuj elementy</h1>
+    <div class="drag-drop-container">
+        <div class="drag-items">
+            <div class="drag-item" draggable="true" id="item5">API</div>
+            <div class="drag-item" draggable="true" id="item3">JS</div>
+            <div class="drag-item" draggable="true" id="item8">HTTP</div>
+            <div class="drag-item" draggable="true" id="item1">HTML</div>
+            <div class="drag-item" draggable="true" id="item7">IDE</div>
+            <div class="drag-item" draggable="true" id="item4">SQL</div>
+            <div class="drag-item" draggable="true" id="item6">OOP</div>
+            <div class="drag-item" draggable="true" id="item2">CSS</div>
+        </div>
+        <div class="drop-zones">
+            <div class="drop-zone" id="zone4">Język zapytań do baz danych</div>
+            <div class="drop-zone" id="zone1">Język znaczników używany do tworzenia stron internetowych</div>
+            <div class="drop-zone" id="zone7">Zintegrowane środowisko programistyczne</div>
+            <div class="drop-zone" id="zone3">Język skryptowy używany do tworzenia dynamicznych stron</div>
+            <div class="drop-zone" id="zone6">Programowanie obiektowe</div>
+            <div class="drop-zone" id="zone8">Protokół przesyłania dokumentów hipertekstowych</div>
+            <div class="drop-zone" id="zone2">Język stylów używany do formatowania wyglądu stron</div>
+            <div class="drop-zone" id="zone5">Interfejs programistyczny aplikacji</div>
+        </div>
+        <p id="drag-drop-message" style="margin-top: 10px; color: red;"></p>
+    </div>
+
     <div class="password-container">
+        <p id="password-display" style="margin-top: 20px; font-size: 18px; color: green;"></p>
         <input type="text" id="password-input" placeholder="Wpisz hasło">
         <button id="check-password-btn">Sprawdź</button>
         <p id="password-message" style="margin-top: 10px; color: red;"></p>
     </div>
 
+    <script src="JS/pages/poziom2/drag-drop.js"></script>
     <script src="JS/main.js" type="module"></script>
 </body>
 </html>

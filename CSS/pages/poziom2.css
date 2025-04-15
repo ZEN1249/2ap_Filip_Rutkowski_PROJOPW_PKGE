@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.drag-drop-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.drag-items {
+    display: flex; /* Zmieniono na poziomy układ */
+    flex-direction: row;
+    gap: 20px; /* Odstępy między elementami */
+}
+
+.drag-item {
+    padding: 10px;
+    background-color: #e7e7e7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: grab;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.drag-item:hover {
+    background-color: #d6d6d6;
+    transform: scale(1.05);
+}
+
+.drag-item:active {
+    cursor: grabbing;
+    background-color: #ccc;
+}
+
+.drop-zones {
+    display: flex; /* Zmieniono na poziomy układ */
+    flex-direction: row;
+    gap: 20px; /* Odstępy między strefami */
+}
+
+.drop-zone {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    min-width: 100px; /* Minimalna szerokość dla poziomego układu */
+    min-height: 50px; /* Wysokość strefy */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.drop-zone:hover {
+    background-color: #e8e8e8;
+    border-color: #aaa;
+}
+
+.drop-zone.correct {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+}
+
+.drop-zone.incorrect {
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+}
+
+#drag-drop-message {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}

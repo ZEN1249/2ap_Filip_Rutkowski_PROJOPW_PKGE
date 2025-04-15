@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Odpowiedzi</title>
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/pages/odpowiedzi.css">
 </head>
 <body>
-    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="zasady.html">Zasady</a>
+        <a href="jakgrac.html">Jak grać</a>
+    </nav>
+
+    <h1>Odpowiedzi</h1>
+    <div class="answers-container">
+        <h2>Poziom 1 - Krzyżówka</h2>
+        <ul>
+            <li>1. MYSZKA</li>
+            <li>2. RAM</li>
+            <li>3. MONITOR</li>
+            <li>4. DYSK</li>
+            <li>5. KLAWIATURA</li>
+            <li>6. PROCESOR</li>
+        </ul>
+
+        <h2>Poziom 2 - Dopasuj elementy</h2>
+        <ul>
+            <li>HTML - Język znaczników używany do tworzenia stron internetowych</li>
+            <li>CSS - Język stylów używany do formatowania wyglądu stron</li>
+            <li>JS - Język skryptowy używany do tworzenia dynamicznych stron</li>
+            <li>SQL - Język zapytań do baz danych</li>
+            <li>API - Interfejs programistyczny aplikacji</li>
+            <li>OOP - Programowanie obiektowe</li>
+            <li>IDE - Zintegrowane środowisko programistyczne</li>
+            <li>HTTP - Protokół przesyłania dokumentów hipertekstowych</li>
+        </ul>
+
+        <h2>Hasła do poziomów</h2>
+        <p>Poziom 1: <span class="hidden-password" data-password="ZAISAE">Kliknij, aby zobaczyć</span></p>
+        <p>Poziom 2: <span class="hidden-password" data-password="PROGRAMOWANIE">Kliknij, aby zobaczyć</span></p>
+        <p>Poziom 3: <span class="hidden-password" data-password="haslo3">Kliknij, aby zobaczyć</span></p>
+        <p>Poziom 4: <span class="hidden-password" data-password="haslo4">Kliknij, aby zobaczyć</span></p>
+        <p>Poziom 5: <span class="hidden-password" data-password="haslo5">Kliknij, aby zobaczyć</span></p>
+    </div>
+
+    <script type="module" src="JS/main.js"></script>
+    <script type="module" src="JS/pages/odpowiedzi/show-password.js"></script>
 </body>
 </html>

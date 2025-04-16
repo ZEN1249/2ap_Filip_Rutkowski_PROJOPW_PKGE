@@ -15,14 +15,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const userInput = passwordInput.value;
 
                 if (userInput === password) {
-                    if (unlock) {
-                        localStorage.setItem(unlock, 'unlocked');
-                    }
-                    passwordMessage.style.color = "green";
-                    passwordMessage.textContent = `Hasło poprawne! ${unlock ? `Poziom ${unlock.replace('poziom', '')} został odblokowany.` : ''}`;
-                    setTimeout(() => {
+                    if (currentLevel === 'poziom5') {
+                        localStorage.setItem('gameCompleted', 'true');
                         window.location.href = 'index.html';
-                    }, 2000);
+                    } else if (unlock) {
+                        localStorage.setItem(unlock, 'unlocked');
+                        passwordMessage.style.color = "green";
+                        passwordMessage.textContent = `Hasło poprawne! Poziom ${unlock.replace('poziom', '')} został odblokowany.`;
+                        setTimeout(() => {
+                            window.location.href = 'index.html';
+                        }, 2000);
+                    }
                 } else {
                     passwordMessage.style.color = "red";
                     passwordMessage.textContent = "Niepoprawne hasło. Spróbuj ponownie.";
@@ -40,4 +43,56 @@ document.addEventListener('DOMContentLoaded', () => {
             button.style.display = 'none';
         }
     });
+
+    if (localStorage.getItem('gameCompleted') === 'true') {
+        localStorage.removeItem('gameCompleted');
+        showCongratulations();
+    }
 });
+
+function showCongratulations() {
+    const body = document.body;
+
+    const congratsOverlay = document.createElement('div');
+    congratsOverlay.classList.add('congrats-overlay');
+    congratsOverlay.innerHTML = `
+        <div class="congrats-message">
+            🎉🎊 <h1>Gratulacje!</h1> 🎊🎉
+            <p>Udało Ci się przejść wszystkie poziomy łamigłówek!</p>
+            <button id="close-congrats-btn">Zamknij</button>
+        </div>
+    `;
+    body.appendChild(congratsOverlay);
+
+    const confettiScript = document.createElement('script');
+    confettiScript.src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js";
+    confettiScript.onload = () => {
+        const duration = 5 * 1000;
+        const end = Date.now() + duration;
+
+        (function frame() {
+            confetti({
+                particleCount: 5,
+                angle: 90,
+                spread: 55,
+                origin: { x: 0, y: 1 }
+            });
+
+            confetti({
+                particleCount: 5,
+                angle: 90,
+                spread: 55,
+                origin: { x: 1, y: 1 }
+            });
+
+            if (Date.now() < end) {
+                requestAnimationFrame(frame);
+            }
+        })();
+    };
+    document.body.appendChild(confettiScript);
+
+    document.getElementById('close-congrats-btn').addEventListener('click', () => {
+        document.querySelector('.congrats-overlay').remove();
+    });
+}

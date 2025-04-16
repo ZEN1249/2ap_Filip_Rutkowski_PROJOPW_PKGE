@@ -66,3 +66,61 @@ main {
 .reset-button:hover {
     background-color: #ff4d4d;
 }
+.congrats-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+}
+
+.congrats-message {
+    background-color: #4caf50;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: pop-in 0.5s ease-out;
+}
+
+.congrats-message h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.congrats-message p {
+    font-size: 18px;
+    margin: 0 0 20px;
+}
+
+.congrats-message button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.congrats-message button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes pop-in {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

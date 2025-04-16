@@ -3,5 +3,5 @@ export const levelConfig = {
     poziom2: { password: "PROGRAMOWANIE", unlock: "poziom3" },
     poziom3: { password: "QUIZMASTER", unlock: "poziom4" },
     poziom4: { password: "LABYRINTHOS", unlock: "poziom5" },
-    poziom5: { password: "haslo5", unlock: null }
+    poziom5: { password: "KODMASTER", unlock: null }
 };

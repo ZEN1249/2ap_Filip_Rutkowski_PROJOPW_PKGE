@@ -1,10 +1,58 @@
-### Opis poziomów w grze
+### Jak uruchomić grę
+
+Aby gra działała poprawnie, musisz uruchomić ją za pomocą serwera lokalnego. Możesz to zrobić na dwa sposoby: za pomocą **XAMPP** lub wtyczki **Live Server** w Visual Studio Code.
 
 ---
 
+### Uruchamianie gry za pomocą XAMPP
+
+1. **Zainstaluj XAMPP**:
+   - Pobierz XAMPP z oficjalnej strony: [https://www.apachefriends.org/index.html](https://www.apachefriends.org/index.html).
+   - Zainstaluj XAMPP na swoim komputerze.
+
+2. **Skopiuj projekt do folderu serwera**:
+   - Po instalacji XAMPP znajdź folder `htdocs` (domyślnie znajduje się w katalogu instalacyjnym XAMPP, np. `C:\xampp\htdocs`).
+   - Skopiuj cały folder projektu (np. `PROJOPW_PKGE`) do folderu `htdocs`.
+
+3. **Uruchom serwer Apache**:
+   - Otwórz panel sterowania XAMPP.
+   - Kliknij przycisk **Start** obok `Apache`, aby uruchomić serwer.
+
+4. **Otwórz grę w przeglądarce**:
+   - W przeglądarce wpisz adres: `http://localhost/PROJOPW_PKGE/index.html`.
+   - Gra powinna działać poprawnie.
+
+---
+
+### Uruchamianie gry za pomocą Live Server w Visual Studio Code
+
+1. **Zainstaluj wtyczkę Live Server**:
+   - Otwórz Visual Studio Code.
+   - Przejdź do zakładki "Extensions" (ikona kwadratu po lewej stronie).
+   - Wyszukaj "Live Server" i zainstaluj wtyczkę autorstwa Ritwick Dey.
+
+2. **Uruchom grę za pomocą Live Server**:
+   - Kliknij prawym przyciskiem myszy na plik `index.html` w swoim projekcie.
+   - Wybierz opcję **"Open with Live Server"**.
+   - Przeglądarka automatycznie otworzy grę pod adresem `http://127.0.0.1:5500` lub podobnym.
+
+3. **Działanie Live Server**:
+   - Live Server uruchamia lokalny serwer HTTP, dzięki czemu gra działa poprawnie.
+   - Każda zmiana w plikach projektu automatycznie odświeża stronę w przeglądarce.
+
+---
+
+### Dlaczego serwer lokalny jest potrzebny?
+
+Moduły JavaScript (`import/export`) wymagają serwera HTTP/HTTPS, aby działały poprawnie. Jeśli otworzysz plik `index.html` bezpośrednio (np. przez dwukrotne kliknięcie), gra może nie działać poprawnie. Użycie XAMPP lub Live Server rozwiązuje ten problem.
+
+---
+
+### Opis poziomów w grze
+
 #### Poziom 1 - Krzyżówka
-- Opis: Klasyczna krzyżówka, w której użytkownik musi wpisać odpowiednie hasła w pola na podstawie podanych podpowiedzi.
-- Cechy wyróżniające:
+- **Opis**: Klasyczna krzyżówka, w której użytkownik musi wpisać odpowiednie hasła w pola na podstawie podanych podpowiedzi.
+- **Cechy wyróżniające**:
   - Interaktywne pola tekstowe, które automatycznie przechodzą do następnego pola po wpisaniu litery.
   - Podpowiedzi poziome wyświetlane obok krzyżówki.
   - Hasło generowane na podstawie wyróżnionych liter w krzyżówce.
@@ -13,8 +61,8 @@
 ---
 
 #### Poziom 2 - Dopasuj elementy
-- Opis: Gra typu "przeciągnij i upuść", w której użytkownik musi dopasować elementy do odpowiednich kategorii.
-- Cechy wyróżniające:
+- **Opis**: Gra typu "przeciągnij i upuść", w której użytkownik musi dopasować elementy do odpowiednich kategorii.
+- **Cechy wyróżniające**:
   - Interaktywne elementy przeciągania i upuszczania.
   - Informacja zwrotna o poprawnym lub błędnym dopasowaniu.
   - Hasło wyświetlane po poprawnym dopasowaniu wszystkich elementów.
@@ -23,8 +71,8 @@
 ---
 
 #### Poziom 3 - Quiz
-- Opis: Quiz wielokrotnego wyboru, w którym użytkownik musi odpowiedzieć na pytania dotyczące informatyki.
-- Cechy wyróżniające:
+- **Opis**: Quiz wielokrotnego wyboru, w którym użytkownik musi odpowiedzieć na pytania dotyczące informatyki.
+- **Cechy wyróżniające**:
   - Pytania z wieloma opcjami odpowiedzi.
   - Informacja zwrotna o poprawnych i błędnych odpowiedziach (kolory zielony i czerwony).
   - Hasło wyświetlane po poprawnym rozwiązaniu wszystkich pytań.
@@ -33,8 +81,8 @@
 ---
 
 #### Poziom 4 - Labirynt
-- Opis: Gra w labirynt, w której użytkownik musi znaleźć drogę od punktu startowego do mety.
-- Cechy wyróżniające:
+- **Opis**: Gra w labirynt, w której użytkownik musi znaleźć drogę od punktu startowego do mety.
+- **Cechy wyróżniające**:
   - Labirynt generowany dynamicznie za pomocą algorytmu (np. algorytm Kruskala lub DFS).
   - Obsługa klawiatury (strzałki) do poruszania się po labiryncie.
   - Informacja o poprawnym ukończeniu labiryntu i wyświetlenie hasła.
@@ -43,8 +91,8 @@
 ---
 
 #### Poziom 5 - Uzupełnij kod
-- Opis: Gra polegająca na uzupełnianiu brakującego kodu w podanych fragmentach.
-- Cechy wyróżniające:
+- **Opis**: Gra polegająca na uzupełnianiu brakującego kodu w podanych fragmentach.
+- **Cechy wyróżniające**:
   - Losowe generowanie fragmentów kodu do uzupełnienia.
   - Obsługa różnych wariantów odpowiedzi (np. z dodatkowymi spacjami).
   - Informacja zwrotna o poprawności wpisanego kodu.
@@ -54,21 +102,22 @@
 ---
 
 ### Dodatkowe funkcjonalności
-1. Zapisywanie postępu:
+
+1. **Zapisywanie postępu**:
    - Postęp w grze (np. odblokowane poziomy) jest zapisywany w localStorage.
    - Po zamknięciu i ponownym otwarciu gry użytkownik może kontynuować od ostatniego odblokowanego poziomu.
 
-2. Resetowanie postępu:
+2. **Resetowanie postępu**:
    - Na stronie głównej znajduje się przycisk "Resetuj postęp", który usuwa wszystkie dane z localStorage.
 
-3. Gratulacje po ukończeniu gry:
+3. **Gratulacje po ukończeniu gry**:
    - Po ukończeniu wszystkich poziomów użytkownik wraca na stronę główną, gdzie wyświetlane są gratulacje z efektem konfetti.
 
-4. Strona z odpowiedziami:
-   - Strona odpowiedzi.html zawiera wszystkie odpowiedzi do zadań z każdego poziomu, podzielone na kategorie.
+4. **Strona z odpowiedziami**:
+   - Strona `odpowiedzi.html` zawiera wszystkie odpowiedzi do zadań z każdego poziomu, podzielone na kategorie.
 
-5. Strona z zasadami:
-   - Strona zasady.html opisuje zasady gry, takie jak uczciwość i samodzielne rozwiązywanie zadań.
+5. **Strona z zasadami**:
+   - Strona `zasady.html` opisuje zasady gry, takie jak uczciwość i samodzielne rozwiązywanie zadań.
 
-6. Strona "Jak grać":
-   - Strona jakgrac.html zawiera instrukcje dotyczące mechaniki gry i sposobu przechodzenia poziomów.
+6. **Strona "Jak grać"**:
+   - Strona `jakgrac.html` zawiera instrukcje dotyczące mechaniki gry i sposobu przechodzenia poziomów.

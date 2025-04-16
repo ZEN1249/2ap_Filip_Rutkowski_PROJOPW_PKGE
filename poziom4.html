@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poziom4</title>
-    <link rel="icon" href="IMG/icons/fav-icon.png" type="image/x-icon">
+    <title>Poziom 4 - Labirynt</title>
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/pages/poziom4.css">
 </head>
 <body>
     <nav>
+        <a href="index.html">Home</a>
         <a href="zasady.html">Zasady</a>
         <a href="jakgrac.html">Jak grać</a>
         <a href="odpowiedzi.html">Odpowiedzi</a>
     </nav>
 
+    <h1>Poziom 4 - Labirynt</h1>
+    <div class="labyrinth-container">
+        <div id="labyrinth"></div>
+    </div>
+
     <div class="password-container">
+        <p id="password-display" style="margin-top: 20px; font-size: 18px; color: green;"></p>
         <input type="text" id="password-input" placeholder="Wpisz hasło">
         <button id="check-password-btn">Sprawdź</button>
         <p id="password-message" style="margin-top: 10px; color: red;"></p>
     </div>
 
+    <script src="JS/pages/poziom4/labyrinth.js"></script>
     <script src="JS/main.js" type="module"></script>
 </body>
 </html>

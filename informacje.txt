@@ -1,0 +1,74 @@
+### Opis poziomów w grze
+
+---
+
+#### Poziom 1 - Krzyżówka
+- Opis: Klasyczna krzyżówka, w której użytkownik musi wpisać odpowiednie hasła w pola na podstawie podanych podpowiedzi.
+- Cechy wyróżniające:
+  - Interaktywne pola tekstowe, które automatycznie przechodzą do następnego pola po wpisaniu litery.
+  - Podpowiedzi poziome wyświetlane obok krzyżówki.
+  - Hasło generowane na podstawie wyróżnionych liter w krzyżówce.
+  - Obsługa klawisza "Backspace" do cofania się między polami.
+
+---
+
+#### Poziom 2 - Dopasuj elementy
+- Opis: Gra typu "przeciągnij i upuść", w której użytkownik musi dopasować elementy do odpowiednich kategorii.
+- Cechy wyróżniające:
+  - Interaktywne elementy przeciągania i upuszczania.
+  - Informacja zwrotna o poprawnym lub błędnym dopasowaniu.
+  - Hasło wyświetlane po poprawnym dopasowaniu wszystkich elementów.
+  - Obsługa błędów i możliwość ponownego dopasowania.
+
+---
+
+#### Poziom 3 - Quiz
+- Opis: Quiz wielokrotnego wyboru, w którym użytkownik musi odpowiedzieć na pytania dotyczące informatyki.
+- Cechy wyróżniające:
+  - Pytania z wieloma opcjami odpowiedzi.
+  - Informacja zwrotna o poprawnych i błędnych odpowiedziach (kolory zielony i czerwony).
+  - Hasło wyświetlane po poprawnym rozwiązaniu wszystkich pytań.
+  - Obsługa błędnych odpowiedzi z możliwością poprawy.
+
+---
+
+#### Poziom 4 - Labirynt
+- Opis: Gra w labirynt, w której użytkownik musi znaleźć drogę od punktu startowego do mety.
+- Cechy wyróżniające:
+  - Labirynt generowany dynamicznie za pomocą algorytmu (np. algorytm Kruskala lub DFS).
+  - Obsługa klawiatury (strzałki) do poruszania się po labiryncie.
+  - Informacja o poprawnym ukończeniu labiryntu i wyświetlenie hasła.
+  - Możliwość ponownego wygenerowania labiryntu przy odświeżeniu strony.
+
+---
+
+#### Poziom 5 - Uzupełnij kod
+- Opis: Gra polegająca na uzupełnianiu brakującego kodu w podanych fragmentach.
+- Cechy wyróżniające:
+  - Losowe generowanie fragmentów kodu do uzupełnienia.
+  - Obsługa różnych wariantów odpowiedzi (np. z dodatkowymi spacjami).
+  - Informacja zwrotna o poprawności wpisanego kodu.
+  - Wyświetlenie hasła po poprawnym rozwiązaniu zadania.
+  - Możliwość wpisania hasła, aby zakończyć poziom.
+
+---
+
+### Dodatkowe funkcjonalności
+1. Zapisywanie postępu:
+   - Postęp w grze (np. odblokowane poziomy) jest zapisywany w localStorage.
+   - Po zamknięciu i ponownym otwarciu gry użytkownik może kontynuować od ostatniego odblokowanego poziomu.
+
+2. Resetowanie postępu:
+   - Na stronie głównej znajduje się przycisk "Resetuj postęp", który usuwa wszystkie dane z localStorage.
+
+3. Gratulacje po ukończeniu gry:
+   - Po ukończeniu wszystkich poziomów użytkownik wraca na stronę główną, gdzie wyświetlane są gratulacje z efektem konfetti.
+
+4. Strona z odpowiedziami:
+   - Strona odpowiedzi.html zawiera wszystkie odpowiedzi do zadań z każdego poziomu, podzielone na kategorie.
+
+5. Strona z zasadami:
+   - Strona zasady.html opisuje zasady gry, takie jak uczciwość i samodzielne rozwiązywanie zadań.
+
+6. Strona "Jak grać":
+   - Strona jakgrac.html zawiera instrukcje dotyczące mechaniki gry i sposobu przechodzenia poziomów.

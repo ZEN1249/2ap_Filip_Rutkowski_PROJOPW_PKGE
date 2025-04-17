@@ -19,7 +19,7 @@ Aby gra działała poprawnie, musisz uruchomić ją za pomocą serwera lokalnego
    - Kliknij przycisk **Start** obok `Apache`, aby uruchomić serwer.
 
 4. **Otwórz grę w przeglądarce**:
-   - W przeglądarce wpisz adres: `http://localhost/PROJOPW_PKGE/index.html`.
+   - W przeglądarce wpisz adres: `http://localhost/PROGRAMISTYCZNE_GRY_LOGICZNE/index.html`.
    - Gra powinna działać poprawnie.
 
 ---

@@ -12,7 +12,7 @@ Aby gra działała poprawnie, musisz uruchomić ją za pomocą serwera lokalnego
 
 2. **Skopiuj projekt do folderu serwera**:
    - Po instalacji XAMPP znajdź folder `htdocs` (domyślnie znajduje się w katalogu instalacyjnym XAMPP, np. `C:\xampp\htdocs`).
-   - Skopiuj cały folder projektu (np. `PROJOPW_PKGE`) do folderu `htdocs`.
+   - Skopiuj cały folder projektu (np. `PROGRAMISTYCZNE_GRY_LOGICZNE`) do folderu `htdocs`.
 
 3. **Uruchom serwer Apache**:
    - Otwórz panel sterowania XAMPP.
